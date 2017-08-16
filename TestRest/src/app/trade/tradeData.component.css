@@ -1,0 +1,29 @@
+main {
+    box-shadow: 0 2px 5px rgba(0,0,0,0.26);
+    width: 98%;
+    margin-left: auto;
+    margin-right:auto;
+}
+.search-div {
+    text-align: center;
+    margin:5px;
+    
+}
+.my-table {
+    margin:14px;
+   
+}
+
+.searched-url{
+    margin-left:28%;
+    margin-bottom:5px;
+}
+.my-button {
+    background-color: #6386ea;
+    color: white;
+}
+hr {
+    margin-top: 0px;
+    width: 90%;
+    border: 1px solid #8c8c8c;
+}

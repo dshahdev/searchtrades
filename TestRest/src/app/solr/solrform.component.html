@@ -1,0 +1,15 @@
+
+<div class="container">
+    <h2>New Search:</h2>
+    <form  #solrForm="ngForm" >
+        <div class="form-group">
+            <!--<label for="search">Search:</label>-->
+            <input type="text" class="form-control" id="search"  required placeholder=""
+                 #search name="url" [(ngModel)]="text">
+        </div>
+         <button type="submit" class="btn my-button" (click)="onSearch(search.value)" >Submit</button>
+    </form>
+    
+</div>
+
+<!-- #solrForm="ngForm" -->

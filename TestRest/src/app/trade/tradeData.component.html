@@ -1,0 +1,89 @@
+<div>
+    <div class="row ">
+            <h2 class="col-xs-6">Requested data</h2>
+            <div class="col-xs-2">
+                <button [disabled]="disabledPrev" type="submit" #prevButton class="btn my-button" (click)="onPrev()" >Previous</button>
+                <button [disabled]="disabledNext" type="submit" #nextButton class="btn my-button" (click)="onNext()" >Next</button>
+            </div>
+            <!--<div class="col-xs-2">
+                <button type="submit" class="btn my-button" (click)="onPrev()" >Next</button>
+            </div>-->
+            <!--<div class="col-xs-4">
+                <div class="row">
+                    <label class="col-xs-12 label-control">Sort by</label>
+                </div>
+                <div class="col-xs-6">
+                    <div class="row">
+                        <select class="form-control input-sm" [(ngModel)]="sortBy">
+                            <option ngValue="name">Name</option>
+                            <option ngValue="email">Email</option>
+                            <option ngValue="age">Age</option>
+                            <option [ngValue]="sortByWordLength">City</option>
+                        </select>
+                    </div>
+                </div>
+                <div class="col-xs-6">
+                    <div class="row">
+                        <select class="form-control input-sm" [(ngModel)]="sortOrder">
+                            <option ngValue="asc">Ascending</option>
+                            <option ngValue="desc">Descending</option>
+                            <option ngValue="badValue">Bad value</option>
+                        </select>
+                    </div>
+                </div>
+            </div>-->
+    </div>
+    <hr/>
+    <main>
+        
+        <div>
+            <table class="table table-striped" >
+                <thead>
+                    <tr >
+                        <th style="width:5%">File Name</th>
+                        <th style="width:5%">Id</th>
+                        <th style="width:5%">Inv.No</th>
+                        <th style="width:5%">Date</th>  
+                        <th style="width:5%">Iec</th>
+                        <th style="width:5%">Sender</th>
+                        <th style="width:5%">City</th>
+                        <th style="width:5%">Ritc</th>
+                        <th style="width:5%">Item Name</th>
+                        <th style="width:5%">Qty</th>
+                        <th style="width:5%">Uqc</th>
+                        <th style="width:5%">Price</th>
+                        <th style="width:5%">Value</th>
+                        <th style="width:5%">Currency</th>
+                        <th style="width:5%">Receiver</th>
+                        <th style="width:5%">Port</th>
+                        <th style="width:5%">Country</th>
+                        
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr *ngFor="let item of tradeData?.response.docs">
+                        <td>{{item.SNAPSHOT_ID}}</td>
+                        <td>{{item.MASTER_SID}}</td>
+                        <td>{{item.INVOICEN_NO}}</td>
+                        <td>{{item.EXPORT_DATE}}</td>
+                        <td>{{item.IEC_CODE}}</td>
+                        <td>{{item.EXPORTER_NAME}}</td>
+                        <td>{{item.EXPORTER_CITY}}</td>
+                        <td>{{item.RIRC_CODE}}</td>
+                        <td>{{item.ITEM}}</td>
+                        <td>{{item.QYANTITY}}</td>
+                        <td>{{item.UQC}}</td>
+                        <td>{{item.ITEM_RATE}}</td>
+                        <td>{{item.FOB_VALUE}}</td>
+                        <td>{{item.CURRENCY_NAME}}</td>
+                        <td>{{item.CONSIGNEE_ADDRESS}}</td>
+                        <td>{{item.PORT_NAME}}</td>
+                        <td>{{item.COUNTRY_NAME}}</td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+
+       
+    </main>
+</div>

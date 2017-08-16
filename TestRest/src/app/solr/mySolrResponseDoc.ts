@@ -1,0 +1,28 @@
+export class MySolrResponseDoc {
+    MASTER_SID:string;
+    TEMPLATE_SID:string;
+    SNAPSHOT_ID:string;
+    IEC_SID:string;
+    RITC_SID:string;
+    CONSIGNEE_SID:string;
+    QUANTITY:string;
+    ITEM_RATE:string;
+    CURRENCY_ID:string;
+    FOB_VALUE:string;
+    INVOICE_NO:string;
+    IEC_CODE:string;
+    EXPORTER_NAME:string;
+    EXPORTER_ADDRESS:string;
+    EXPORTER_CITY:string;
+    RITC_CODE:string;
+    ITEM:string;
+    UQC:string;
+    CONSIGNEE_NAME:string;
+    PORT_NAME:string;
+    COUNTRY_NAME:string;
+    CONSIGNEE_ADDRESS:string;
+    CURRENCY_NAME:string;
+    EXPORT_DATE:string;
+    id:string;
+    _version_:string;
+} 
