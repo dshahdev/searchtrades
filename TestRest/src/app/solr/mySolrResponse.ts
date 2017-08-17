@@ -1,5 +1,5 @@
 
-import { MySolrResponseDoc } from './/mysolrResponseDoc';
+import { MySolrResponseDoc } from './/mySolrResponseDoc';
 
 export class MySolrResponse {
     numFound:number;
