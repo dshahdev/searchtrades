@@ -1,0 +1,7 @@
+{
+    "/solr/*": {
+        "target": "http://10.0.1.22:8983",
+        "secure": false,
+        "logLevel": "debug"
+    }
+}

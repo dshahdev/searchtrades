@@ -8,8 +8,8 @@ export class solrUrl {
     queryText:string;
 
     url: string;
-    protocol:string = "http://";
-    colon:string = ":";
+    // protocol:string = "http://";
+    // colon:string = ":";
     FS = "/";
     AMP = "&";
     ROOT = "solr";
@@ -26,17 +26,14 @@ export class solrUrl {
 
     //creates new url
 
-    buildURL( address:string, pt: number,  dbName: string, 
+    buildURL(   dbName: string, 
                 rw: number, srow:number, qText:string): void {
 
-                    this.ipAddress = address;
-                    this.port = pt;
                     this.solr_core_name = dbName;
                     this.rows = rw;
                     this.start_row = srow;
                     this.queryText = qText;
-                    this.finalURL = this.protocol + this.ipAddress + this.colon + 
-                                this.port + this.FS + this.ROOT + this.FS +this.solr_core_name +
+                    this.finalURL = this.FS + this.ROOT + this.FS +this.solr_core_name +
                                 this.FS + this.SELECT + this.AMPQ + this.queryText + 
                                 this.AMPROWS + this.rows + this.AMPSTART + this.start_row
         
