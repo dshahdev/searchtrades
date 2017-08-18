@@ -29,7 +29,7 @@ export class SolrComponent implements OnInit {
         //to build new url, take the searchtext from user
         // set it as the param with other hardcoded parma in buildurl function
         
-        this.url.buildURL("10.0.1.22",8983,"gdata",this.numRows,this.start,searchText);
+        this.url.buildURL("gdata",this.numRows,this.start,searchText);
       
 
         // call the service's seturl method, passing new new build url
@@ -46,7 +46,7 @@ export class SolrComponent implements OnInit {
 
         this.sharedService.getStartRow().subscribe((num:number) => {
             this.start = num;
-            this.url.buildURL("10.0.1.22",8983,"gdata",this.numRows,this.start,this.text);  
+            this.url.buildURL("gdata",this.numRows,this.start,this.text);  
             this.sharedService.setUrl(this.url.getFinalUrl());
         }) ;
         this.setPagging();  
@@ -62,13 +62,13 @@ export class SolrComponent implements OnInit {
             if(this.page === 1){
 
                 this.start = this.start + 10;
-                this.url.buildURL("10.0.1.22",8983,"gdata",this.numRows,this.start,this.text); 
+                this.url.buildURL("gdata",this.numRows,this.start,this.text); 
                 this.sharedService.setUrl(this.url.getFinalUrl());  
             
             } else if(this.page === -1){
 
                 this.start = this.start - 10;
-                this.url.buildURL("10.0.1.22",8983,"gdata",this.numRows,this.start,this.text);
+                this.url.buildURL("gdata",this.numRows,this.start,this.text);
                 this.sharedService.setUrl(this.url.getFinalUrl());  
 
             }  

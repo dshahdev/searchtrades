@@ -1,7 +1,7 @@
 
 export class solrUrl {
-    ipAddress: string;
-    port: number;
+    // ipAddress: string;
+    // port: number;
     solr_core_name: string;
     rows:number;
     start_row: number;
@@ -25,7 +25,8 @@ export class solrUrl {
     constructor() {}
 
     //creates new url
-
+    // this.url.buildURL("gdata",this.numRows,this.start,searchText);
+    
     buildURL(   dbName: string, 
                 rw: number, srow:number, qText:string): void {
 
